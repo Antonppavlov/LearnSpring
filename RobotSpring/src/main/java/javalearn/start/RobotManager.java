@@ -1,5 +1,6 @@
 package javalearn.start;
 
+import javalearn.robot.Robot;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
