@@ -12,6 +12,8 @@
         <module>RobotImpl1</module>
         <module>RobotImpl2</module>
         <module>RobotSpring</module>
+        <module>RobotDI</module>
+        <module>RobotImport</module>
     </modules>
     <dependencies>
         <dependency>

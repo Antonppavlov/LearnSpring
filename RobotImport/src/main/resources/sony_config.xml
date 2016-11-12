@@ -3,8 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-    <bean id="t1000" class="javalearn.robot.Robot"></bean>
+    <bean name="sonyHead" class="javalearn.sony.SonyHead"/>
+    <bean name="sonyLeg"  class="javalearn.sony.SonyLeg"/>
+    <bean name="sonyHand" class="javalearn.sony.SonyHand"/>
 
 
 </beans>
