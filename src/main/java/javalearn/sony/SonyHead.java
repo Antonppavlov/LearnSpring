@@ -1,8 +1,8 @@
 package javalearn.sony;
 
-import javalearn.interfaces.Head;
+import javalearn.interfaces.IHead;
 
-public class SonyHead  implements Head {
+public class SonyHead implements IHead {
     public void think(){
         System.out.println("Подумать как Sony");
     }

@@ -1,9 +1,9 @@
 package javalearn.robot;
 
 
-import javalearn.interfaces.Hand;
-import javalearn.interfaces.Head;
-import javalearn.interfaces.Leg;
+import javalearn.interfaces.IHand;
+import javalearn.interfaces.IHead;
+import javalearn.interfaces.ILeg;
 
 public class ModelT1000 extends BaseRobot  {
 
@@ -14,14 +14,14 @@ public class ModelT1000 extends BaseRobot  {
     public ModelT1000() {
     }
 
-    public ModelT1000(Hand hand, Head head, Leg leg) {
-        super(hand, head, leg);
+    public ModelT1000(IHand IHand, IHead IHead, ILeg ILeg) {
+        super(IHand, IHead, ILeg);
     }
 
-    public ModelT1000(Hand hand, Head head, Leg leg,
+    public ModelT1000(IHand IHand, IHead IHead, ILeg ILeg,
                       String color, int year, boolean soundEnabled) {
 
-        this(hand, head, leg);
+        this(IHand, IHead, ILeg);
 
         this.color = color;
         this.year = year;
@@ -36,9 +36,9 @@ public class ModelT1000 extends BaseRobot  {
 
     @Override
     public void action() {
-        head.think();
-        hand.take();
-        leg.go();
+        IHead.think();
+        IHand.take();
+        ILeg.go();
         System.out.println("color: " + color);
         System.out.println("year: " + year);
         System.out.println("isSoundEnabled: " + isSoundEnabled());

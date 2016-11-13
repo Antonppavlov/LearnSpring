@@ -1,48 +1,48 @@
 package javalearn.robot;
 
-import javalearn.interfaces.Hand;
-import javalearn.interfaces.Head;
+import javalearn.interfaces.IHand;
+import javalearn.interfaces.IHead;
 import javalearn.interfaces.IRobot;
-import javalearn.interfaces.Leg;
+import javalearn.interfaces.ILeg;
 
 public abstract class BaseRobot implements IRobot {
-    protected Hand hand;
-    protected Head head;
-    protected Leg leg;
+    protected IHand IHand;
+    protected IHead IHead;
+    protected ILeg ILeg;
 
     public BaseRobot() {
         System.out.println(this + "-BaseRobot constuctor()");
     }
 
-    public BaseRobot(Hand hand, Head head, Leg leg) {
+    public BaseRobot(IHand IHand, IHead IHead, ILeg ILeg) {
         this();
-        this.hand = hand;
-        this.head = head;
-        this.leg = leg;
+        this.IHand = IHand;
+        this.IHead = IHead;
+        this.ILeg = ILeg;
     }
 
 
-    public Hand getHand() {
-        return hand;
+    public IHand getIHand() {
+        return IHand;
     }
 
-    public void setHand(Hand hand) {
-        this.hand = hand;
+    public void setIHand(IHand IHand) {
+        this.IHand = IHand;
     }
 
-    public Head getHead() {
-        return head;
+    public IHead getIHead() {
+        return IHead;
     }
 
-    public void setHead(Head head) {
-        this.head = head;
+    public void setIHead(IHead IHead) {
+        this.IHead = IHead;
     }
 
-    public Leg getLeg() {
-        return leg;
+    public ILeg getILeg() {
+        return ILeg;
     }
 
-    public void setLeg(Leg leg) {
-        this.leg = leg;
+    public void setILeg(ILeg ILeg) {
+        this.ILeg = ILeg;
     }
 }

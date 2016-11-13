@@ -1,5 +1,5 @@
 package javalearn.interfaces;
 
-public interface Leg {
+public interface ILeg {
       void go();
 }

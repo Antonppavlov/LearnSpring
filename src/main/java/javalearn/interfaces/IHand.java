@@ -1,5 +1,5 @@
 package javalearn.interfaces;
 
-public interface Hand {
+public interface IHand {
      void take();
 }

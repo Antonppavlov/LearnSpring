@@ -1,5 +1,5 @@
 package javalearn.interfaces;
 
-public interface Head {
+public interface IHead {
     void think();
 }

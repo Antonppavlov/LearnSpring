@@ -1,8 +1,8 @@
 package javalearn.sony;
 
-import javalearn.interfaces.Hand;
+import javalearn.interfaces.IHand;
 
-public class SonyHand  implements Hand {
+public class SonyHand  implements IHand {
     public void take(){
         System.out.println("Взять как Sony");
     }

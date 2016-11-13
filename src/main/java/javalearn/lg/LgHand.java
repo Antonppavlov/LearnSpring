@@ -1,8 +1,8 @@
 package javalearn.lg;
 
-import javalearn.interfaces.Hand;
+import javalearn.interfaces.IHand;
 
-public class LgHand  implements Hand {
+public class LgHand  implements IHand {
     public void take(){
         System.out.println("Взять как LG");
     }
