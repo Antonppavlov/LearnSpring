@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="lg_config.xml"/>
+    <import resource="sony_config.xml"/>
+
+    <bean name="t1000LG" class="javalearn.robot.ModelT1000" parent="baseRobotConfig">
+        <constructor-arg ref="lgHand" index="0"/>
+        <constructor-arg ref="lgHead" index="1"/>
+        <constructor-arg ref="lgLeg" index="2"/>
+        <constructor-arg value="silver" index="3" type="java.lang.String"/>
+        <constructor-arg value="2555"   index="4" type="int"/>
+        <constructor-arg value="false"  index="5" type="boolean"/>
+    </bean>
+
+    <bean name="t1000Sony"  class="javalearn.robot.ModelT1000" parent="baseRobotConfig">
+        <constructor-arg value="silver" index="3" type="java.lang.String"/>
+        <constructor-arg value="2555"   index="4" type="int"/>
+        <constructor-arg value="false"  index="5" type="boolean"/>
+    </bean>
+
+
+    <bean id="baseRobotConfig"  abstract="true" class="javalearn.robot.BaseRobot">
+        <constructor-arg ref="sonyHand" index="0"/>
+        <constructor-arg ref="sonyHead" index="1"/>
+        <constructor-arg ref="sonyLeg" index="2"/>
+    </bean>
+
+</beans>
