@@ -1,6 +1,6 @@
 package javalearn.start;
 
-import javalearn.impl.poll.RobotPollMap;
+import javalearn.impl.poll.RobotPollCollection;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +8,7 @@ public class RobotManager {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Application.xml");
 
-        RobotPollMap t1000Pool = (RobotPollMap) context.getBean("t1000Pool2");
+        RobotPollCollection t1000Pool = (RobotPollCollection) context.getBean("t1000GoldenPool");
         t1000Pool.action();
 
     }

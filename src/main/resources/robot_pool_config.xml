@@ -11,14 +11,22 @@
                 <ref bean="t1000LG"/>
                 <ref bean="t1000Sony"/>
                 <bean
-                class="javalearn.impl.robot.ModelT1000">
-                    <constructor-arg ref="lgHand" index="0"  />
+                        class="javalearn.impl.robot.ModelT1000">
+                    <constructor-arg ref="lgHand" index="0"/>
                     <constructor-arg ref="sonyHead" index="1"/>
-                    <constructor-arg ref="lgLeg" index="2"  />
+                    <constructor-arg ref="lgLeg" index="2"/>
+                    <property name="color" value="black"/>
                 </bean>
             </list>
         </property>
     </bean>
+
+    <bean name="t1000GoldenPool" class="javalearn.impl.poll.RobotPollCollection">
+        <constructor-arg name="robotCollection"
+                         value="#{t1000Pool.robotCollection.?[color.toUpperCase() eq 'GOLD']}">
+        </constructor-arg>
+    </bean>
+
 
     <bean name="t1000Pool2" class="javalearn.impl.poll.RobotPollMap">
         <constructor-arg>
@@ -26,17 +34,16 @@
                 <entry key="2000" value-ref="t1000Sony"/>
                 <entry key="2001" value-ref="t1000LG"/>
                 <entry key="2003">
-                <bean
-                        class="javalearn.impl.robot.ModelT1000">
-                    <constructor-arg ref="lgHand" index="0"  />
-                    <constructor-arg ref="sonyHead" index="1"/>
-                    <constructor-arg ref="lgLeg" index="2"  />
-                </bean>
+                    <bean
+                            class="javalearn.impl.robot.ModelT1000">
+                        <constructor-arg ref="lgHand" index="0"/>
+                        <constructor-arg ref="sonyHead" index="1"/>
+                        <constructor-arg ref="lgLeg" index="2"/>
+                    </bean>
                 </entry>
             </map>
         </constructor-arg>
     </bean>
-
 
 
 </beans>
