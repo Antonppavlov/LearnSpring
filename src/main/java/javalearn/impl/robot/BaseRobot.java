@@ -1,4 +1,4 @@
-package javalearn.robot;
+package javalearn.impl.robot;
 
 import javalearn.interfaces.IHand;
 import javalearn.interfaces.IHead;

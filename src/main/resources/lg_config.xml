@@ -3,9 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="lgHead" class="javalearn.lg.LgHead"/>
-    <bean name="lgLeg" class="javalearn.lg.LgLeg"/>
-    <bean name="lgHand" class="javalearn.lg.LgHand"/>
+    <bean name="lgHead" class="javalearn.impl.lg.LgHead"/>
+    <bean name="lgLeg" class="javalearn.impl.lg.LgLeg"/>
+    <bean name="lgHand" class="javalearn.impl.lg.LgHand"/>
 
 
 </beans>

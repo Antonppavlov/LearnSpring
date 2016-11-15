@@ -1,4 +1,4 @@
-package javalearn.robot;
+package javalearn.impl.robot;
 
 
 import javalearn.interfaces.IHand;
@@ -42,6 +42,7 @@ public class ModelT1000 extends BaseRobot  {
         System.out.println("color: " + color);
         System.out.println("year: " + year);
         System.out.println("isSoundEnabled: " + isSoundEnabled());
+        System.out.println("");
     }
 
     @Override

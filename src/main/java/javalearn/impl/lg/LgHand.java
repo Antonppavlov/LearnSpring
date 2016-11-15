@@ -1,4 +1,4 @@
-package javalearn.lg;
+package javalearn.impl.lg;
 
 import javalearn.interfaces.IHand;
 

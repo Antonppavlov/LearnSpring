@@ -1,4 +1,4 @@
-package javalearn.method;
+package javalearn.impl.method;
 
 import org.springframework.beans.factory.support.MethodReplacer;
 

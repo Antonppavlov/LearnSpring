@@ -3,15 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="robot_config.xml"/>
+    <import resource="robot_pool_config.xml"/>
 
 
-    <bean name="robotConveyor" class="javalearn.conveyour.RobotConveyor">
+    <bean name="robotConveyor" class="javalearn.impl.conveyour.RobotConveyor">
         <lookup-method name="createRobot" bean="t1000Sony"/>
     </bean>
 
 
-    <bean class="javalearn.utils.MyBeanPostProcessor"/>
+    <bean class="javalearn.impl.utils.MyBeanPostProcessor"/>
 
 
 </beans>

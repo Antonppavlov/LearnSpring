@@ -1,4 +1,4 @@
-package javalearn.conveyour;
+package javalearn.impl.conveyour;
 
 import javalearn.interfaces.IRobot;
 import javalearn.interfaces.IRobotConveyor;

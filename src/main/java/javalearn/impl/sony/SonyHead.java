@@ -1,4 +1,4 @@
-package javalearn.sony;
+package javalearn.impl.sony;
 
 import javalearn.interfaces.IHead;
 
