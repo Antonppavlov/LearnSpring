@@ -45,5 +45,6 @@
         </constructor-arg>
     </bean>
 
+    <bean name="t1000PoolAutowire" class="javalearn.impl.poll.RobotPollCollection" autowire="constructor"/>
 
 </beans>

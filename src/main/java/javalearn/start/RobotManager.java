@@ -8,7 +8,7 @@ public class RobotManager {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Application.xml");
 
-        RobotPollCollection t1000Pool = (RobotPollCollection) context.getBean("t1000GoldenPool");
+        RobotPollCollection t1000Pool = (RobotPollCollection) context.getBean("t1000PoolAutowire");
         t1000Pool.action();
 
     }
