@@ -2,12 +2,20 @@ package javalearn.impl.robot;
 
 import javalearn.interfaces.IHand;
 import javalearn.interfaces.IHead;
-import javalearn.interfaces.IRobot;
 import javalearn.interfaces.ILeg;
+import javalearn.interfaces.IRobot;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public abstract class BaseRobot implements IRobot {
+    @Qualifier("lgHand")
+    @Autowired
     protected IHand IHand;
+    @Qualifier("lgHead")
+    @Autowired
     protected IHead IHead;
+    @Qualifier("lgLeg")
+    @Autowired
     protected ILeg ILeg;
 
     public BaseRobot() {
@@ -21,28 +29,30 @@ public abstract class BaseRobot implements IRobot {
         this.ILeg = ILeg;
     }
 
-
-    public IHand getIHand() {
+    public javalearn.interfaces.IHand getIHand() {
         return IHand;
     }
 
-    public void setIHand(IHand IHand) {
+    //@Required
+    public void setIHand(javalearn.interfaces.IHand IHand) {
         this.IHand = IHand;
     }
 
-    public IHead getIHead() {
+    public javalearn.interfaces.IHead getIHead() {
         return IHead;
     }
 
-    public void setIHead(IHead IHead) {
+    //@Required
+    public void setIHead(javalearn.interfaces.IHead IHead) {
         this.IHead = IHead;
     }
 
-    public ILeg getILeg() {
+    public javalearn.interfaces.ILeg getILeg() {
         return ILeg;
     }
 
-    public void setILeg(ILeg ILeg) {
+    //@Required
+    public void setILeg(javalearn.interfaces.ILeg ILeg) {
         this.ILeg = ILeg;
     }
 }

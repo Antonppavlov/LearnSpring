@@ -5,37 +5,7 @@
 
     <import resource="lg_config.xml"/>
     <import resource="sony_config.xml"/>
-    <import resource="action_config.xml"/>
 
-    <bean name="t1000LG" class="javalearn.impl.robot.ModelT1000" parent="baseRobotConfig" scope="prototype">
-        <constructor-arg ref="lgHand" index="0"/>
-        <constructor-arg ref="lgHead" index="1"/>
-        <constructor-arg ref="lgLeg" index="2"/>
-        <constructor-arg value="gold" index="3" type="java.lang.String"/>
-        <constructor-arg value="2555"   index="4" type="int"/>
-        <constructor-arg value="false"  index="5" type="boolean"/>
-    </bean>
-
-    <bean name="t1000Sony" class="javalearn.impl.robot.ModelT1000" parent="baseRobotConfig" scope="prototype">
-        <constructor-arg value="gold" index="3" type="java.lang.String"/>
-        <constructor-arg value="2555"   index="4" type="int"/>
-        <constructor-arg value="false"  index="5" type="boolean"/>
-
-    </bean>
-
-
-    <bean name="t1000SonyBlue" class="javalearn.impl.robot.ModelT1000" parent="baseRobotConfig" scope="prototype">
-        <constructor-arg value="blue" index="3" type="java.lang.String"/>
-        <constructor-arg value="2555"   index="4" type="int"/>
-        <constructor-arg value="false"  index="5" type="boolean"/>
-
-    </bean>
-
-
-    <bean id="baseRobotConfig"  abstract="true" class="javalearn.impl.robot.BaseRobot">
-        <constructor-arg ref="sonyHand" index="0"/>
-        <constructor-arg ref="sonyHead" index="1"/>
-        <constructor-arg ref="sonyLeg" index="2"/>
-    </bean>
+ <bean name="t1000" class="javalearn.impl.robot.ModelT1000" scope="prototype"/>
 
 </beans>

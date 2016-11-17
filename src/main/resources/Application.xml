@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="robot_pool_config.xml"/>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    <context:annotation-config/>
+
+    <import resource="robot_config.xml"/>
 
 
-    <bean name="robotConveyor" class="javalearn.impl.conveyour.RobotConveyor">
-        <lookup-method name="createRobot" bean="t1000Sony"/>
-    </bean>
+
 
 
     <bean class="javalearn.impl.utils.MyBeanPostProcessor"/>
