@@ -8,13 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 public abstract class BaseRobot implements IRobot {
-    @Qualifier("lgHand")
     @Autowired
     protected IHand IHand;
-    @Qualifier("lgHead")
     @Autowired
     protected IHead IHead;
-    @Qualifier("lgLeg")
     @Autowired
     protected ILeg ILeg;
 

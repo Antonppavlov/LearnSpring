@@ -8,11 +8,7 @@
 
     <context:annotation-config/>
 
-    <import resource="robot_config.xml"/>
-
-
-
-
+    <context:component-scan base-package="javalearn"/>
 
     <bean class="javalearn.impl.utils.MyBeanPostProcessor"/>
 

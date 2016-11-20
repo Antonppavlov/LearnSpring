@@ -5,11 +5,32 @@ import javalearn.interfaces.IHand;
 import javalearn.interfaces.IHead;
 import javalearn.interfaces.ILeg;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
 public class ModelT1000 extends BaseRobot  {
 
     private String color;
     private int year;
     private boolean soundEnabled;
+
+    @Bean
+    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public ModelT1000 model1(){
+        return new ModelT1000();
+    }
+
+    @Bean
+    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public ModelT1000 model2(){
+        return new ModelT1000("red",2000,true);
+    }
+
+
 
     public ModelT1000() {
     }
